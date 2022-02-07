@@ -57,13 +57,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-window.addEventListener('online', actualizarStatusOnline)
-window.addEventListener('offline', actualizarStatusOnline)
-
-function actualizarStatusOnline(event) {
-    const condition = navigator.onLine
-    ? 'online'
-    : 'offline'
-
-    console.log(`El usuario esta ${condition}`);
-}
+window.addEventListener('click', function (evt) {
+    if (evt.detail === 3) {
+        alert('triple click!');
+    }
+});
